@@ -1,6 +1,11 @@
+import {IsNotEmpty } from 'class-validator';
+
 export class TodoDto {
-    status: 'active' | 'completed';
-    title: string;
-    description: string;
-    id: number;
+  @IsNotEmpty()
+  title: string;
+  @IsNotEmpty()
+  description: string;
+  @IsNotEmpty()
+  id: number;
+  status: 'active' | 'completed';
 }
